@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.seleniumhq.selenium:selenium-chrome-driver:4.2.1'
+    implementation 'io.github.bonigarcia:webdrivermanager:5.2.0'
+    implementation 'io.cucumber:cucumber-java:7.3.3'
+    implementation 'org.seleniumhq.selenium:selenium-java:4.2.1'
+    implementation 'junit:junit:4.13.2'
+    implementation 'junit:junit-dep:4.11'
+    implementation 'me.alb-i986.cucumber:cucumber-java-junit-archetype:1.2.4'
+    implementation 'aws.sdk.kotlin:testing-jvm:0.16.0'
+    implementation 'org.testng:testng:7.6.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    testImplementation group: 'io.cucumber', name: 'cucumber-junit', version: '7.2.3'
+    testImplementation group: 'org.junit.vintage', name: 'junit-vintage-engine', version: '5.8.2'
+    implementation group: 'mysql', name: 'mysql-connector-java', version: '5.1.13'
+}
+
+test {
+    useJUnitPlatform()
+}
